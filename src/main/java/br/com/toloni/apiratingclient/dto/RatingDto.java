@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.UUID;
 
-public class RateDto {
+public class RatingDto {
 
     @JsonProperty("id_rate")
     private UUID idRate;
@@ -12,10 +12,10 @@ public class RateDto {
     @JsonProperty("number_stars_rate")
     private Integer numberStarsRate;
 
-    public RateDto() {
+    public RatingDto() {
     }
 
-    public RateDto(UUID idRate, Integer numberStarsRate) {
+    public RatingDto(UUID idRate, Integer numberStarsRate) {
         this.idRate = idRate;
         this.numberStarsRate = numberStarsRate;
     }
@@ -26,5 +26,13 @@ public class RateDto {
 
     public Integer getNumberStarsRate() {
         return numberStarsRate;
+    }
+
+    @Override
+    public String toString() {
+        return "RatingDto{" +
+                "idRate=" + idRate +
+                ", numberStarsRate=" + numberStarsRate +
+                '}';
     }
 }
